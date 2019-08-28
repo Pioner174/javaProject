@@ -37,8 +37,8 @@ public  class Main {
 //            System.out.println(Arrays.toString(z.values()));
         }
     }
-    public void LongVector(Map<String, double[]> z){
-
+    public double LongVector(double[]  k){
+    return Math.sqrt(k[0]*k[0]+k[1]*k[1]+k[2]*k[2]);
     }
 
 
