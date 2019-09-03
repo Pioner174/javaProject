@@ -26,6 +26,12 @@ public  class Main {
                     String b = scan.next();
                     System.out.println("Результат: " + main.scproiz(vectors.get(a),vectors.get(b)));
                     break;
+                case (4):
+                    System.out.println("Введите название 1-го вектора:");
+                    a = scan.next();
+                    System.out.println("Введите название 2-го вектора:");
+                    b = scan.next();
+                    System.out.println("Результат: " + main.vecproz(vectors.get(a),vectors.get(b)));
             }
         }
     }
@@ -54,10 +60,15 @@ public  class Main {
         }
     }
     public double LongVector(double[]  k){
-    return Math.sqrt(k[0]*k[0]+k[1]*k[1]+k[2]*k[2]);
+
+        return Math.sqrt(k[0]*k[0]+k[1]*k[1]+k[2]*k[2]);
     }
     public double scproiz(double[]  k,double[]  v){
-       return k[0]*v[0]+k[1]*v[1]+k[2]*v[2];
+
+        return k[0]*v[0]+k[1]*v[1]+k[2]*v[2];
+    }
+    public  double vecproz(double[]  k,double[]  v){
+
     }
 
 }
