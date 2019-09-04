@@ -11,6 +11,7 @@ public  class Main {
             System.out.println("Cозданные векторы: ");
             main.display(vectors);
             System.out.println("Выберите пунк из меню: \n" + "1) Добавить вектор;   " + "2) Вычислить длину вектора;\n" + "3) Вычисляющий скалярное произведение двух векторов;");
+            System.out.println("4) Метод, вычисляющий векторное произведение с другим вектором; ");
             switch (scan.nextInt()) {
                 case (1):
                     vectors.put(main.puty(),main.createK());
@@ -31,7 +32,7 @@ public  class Main {
                     a = scan.next();
                     System.out.println("Введите название 2-го вектора:");
                     b = scan.next();
-                    System.out.println("Результат: " + main.vecproz(vectors.get(a),vectors.get(b)));
+                    System.out.println("Результат: " + vectors.put(main.puty(),main.vecproz(vectors.get(a),vectors.get(b))));
             }
         }
     }
@@ -67,8 +68,12 @@ public  class Main {
 
         return k[0]*v[0]+k[1]*v[1]+k[2]*v[2];
     }
-    public  double vecproz(double[]  k,double[]  v){
-
+    public  double[] vecproz(double[] k, double[] v){
+    double[] c = new double[3];
+    c[0]= k[1]*v[2]-k[2]*v[1];
+    c[1]= k[2]*v[0]-k[0]*v[2];
+    c[2]= k[0]*v[1]-k[1]*v[0];
+    return  c;
     }
 
 }
